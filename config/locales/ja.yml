@@ -1,7 +1,3 @@
-# Connecting to raw.githubusercontent.com (185.199.109.133:443)
-# saving to 'ja.yml'
-# 'ja.yml' saved
-
 ja:
   activerecord:
     models:
@@ -13,3 +9,6 @@ ja:
         description: 詳しい説明
         created_at: 登録日時
         updated_at: 更新日時
+# Connecting to raw.githubusercontent.com (185.199.109.133:443)
+# saving to 'ja.yml'
+# 'ja.yml' saved
