@@ -24,3 +24,5 @@ flash.now[:alert] = "提出期限を過ぎています"
 ```ruby
 flash.now.alert = "提出期限を過ぎています"
 ```
+
+### human_attribute_nameについて
