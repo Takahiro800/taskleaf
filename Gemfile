@@ -68,3 +68,5 @@ gem 'rails-i18n'
 gem 'slim-rails'
 
 gem 'bootstrap'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
