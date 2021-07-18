@@ -101,3 +101,6 @@ session.delete(:user_id)
 ```ruby
 reset_session
 ```
+
+## application controllerのメソッドを特定の子コントローラーではスキップしたい
+- `skip_before_action`を利用する
