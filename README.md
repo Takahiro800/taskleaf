@@ -104,3 +104,6 @@ reset_session
 
 ## application controllerのメソッドを特定の子コントローラーではスキップしたい
 - `skip_before_action`を利用する
+
+## migration ファイルの `index: true`とは？
+p.169
