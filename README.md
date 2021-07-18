@@ -77,3 +77,6 @@ task.persisted?
 
 #### modelのvalidatesってどのタイミングで行われるの？
   - formを送ったとき？？
+
+#### local: trueとは？
+  - 何してるか不明
