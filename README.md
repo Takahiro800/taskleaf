@@ -107,3 +107,6 @@ reset_session
 
 ## migration ファイルの `index: true`とは？
 p.169
+
+## 404ページを表示するには？
+p.174
