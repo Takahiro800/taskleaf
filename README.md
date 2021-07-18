@@ -74,3 +74,6 @@ task.persisted?
 - 属性とカラムは別？？
   - 属性はモデルが持つもの。カラムはDBに存在するもの
   - password_digest, passwordについての記述より予想した
+
+#### modelのvalidatesってどのタイミングで行われるの？
+  - formを送ったとき？？
