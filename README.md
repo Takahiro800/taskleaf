@@ -80,3 +80,24 @@ task.persisted?
 
 #### local: trueとは？
   - 何してるか不明
+  - これがない場合は、JSの非同期通信でリクエストを投げることになるらしい
+  [【Rails】form_with (local: true)について - Qiita](https://qiita.com/hayulu/items/5bf26656d7433d406ede)
+  [form_withのlocal: trueって必要なん？これ何なん？（Ruby on Rails） - Qiita](https://qiita.com/kakudaisuke/items/e032c7705db00e8081dc?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items)
+
+### session_paramsについて
+`require`は引数にモデルを渡すはずだったけど、sessionモデルとか作ってない
+	- おそらく、railsでデフォルトで使えるのではないか？
+
+### ぼっち演算子とは？
+[Ruby ぼっち演算子について - Qiita](https://qiita.com/yoshi_4/items/e987b698c1978d248cfc)
+
+### ログアウト
+セッションから`user_id`の情報だけをピンポイントで消すためには以下のようにすれば良い
+```ruby
+session.delete(:user_id)
+```
+
+セッション内のデータを全て削除するさいは以下のようにする
+```ruby
+reset_session
+```
