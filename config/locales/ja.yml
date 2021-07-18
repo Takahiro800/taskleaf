@@ -9,6 +9,14 @@ ja:
         description: 詳しい説明
         created_at: 登録日時
         updated_at: 更新日時
+      user:
+        name: 名前
+        email: メールアドレス
+        admin: 管理者権限
+        password: パスワード
+        password_confirmation: パスワード（確認）
+        created_at: 登録日時
+        updated_at: 更新日時
 # Connecting to raw.githubusercontent.com (185.199.109.133:443)
 # saving to 'ja.yml'
 # 'ja.yml' saved
