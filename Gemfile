@@ -51,10 +51,12 @@ group :test, :development do
   gem 'rubocop-airbnb', require: false
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+	gem 'faker'
   gem 'database_rewinder'
   gem 'bullet'
   gem 'pry-rails'
   gem 'pry-byebug'
+	gem 'capybara'
 end
 
 group :development do
