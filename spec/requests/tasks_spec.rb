@@ -1,32 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe "Tasks", type: :request do
-  describe "GET /index" do
-    it "returns http success" do
-      get "/tasks/index"
-      expect(response).to have_http_status(:success)
-    end
-  end
+describe 'タスク管理機能', type: :system do
+	describe '一覧表示機能' do
+		before do
+			# ユーザーAを作成しておく
+			user_a = FactoryBot.create(:admin_user, name: 'ユーザーA', email: 'a@example.com')
+			# 作成者がユーザーAであるタスクを作成しておく
+			FactoryBot.create(:task, name: '最初のタスク', user: user_a)
+		end
 
-  describe "GET /show" do
-    it "returns http success" do
-      get "/tasks/show"
-      expect(response).to have_http_status(:success)
-    end
-  end
+		context 'ユーザーAがログインしているとき' do
+			before do
+				# ユーザーAでログインする
+			end
 
-  describe "GET /new" do
-    it "returns http success" do
-      get "/tasks/new"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /edit" do
-    it "returns http success" do
-      get "/tasks/edit"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
+			it 'ユーザーAが作成したタスクが表示される' do
+				# 作成済みのタスクの名称が画面上に表示されていることを確認
+			end
+		end
+	end
 end
