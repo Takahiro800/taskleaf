@@ -70,3 +70,4 @@ group :development do
 end
 gem "rails-i18n"
 gem "slim-rails"
+gem "ransack"

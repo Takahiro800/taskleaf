@@ -120,3 +120,7 @@ p.174
 
 ## capybaraを使ってテストする
 [Docker環境でRspec×Capybara×ChromeDriverを動作させる - Qiita](https://qiita.com/ryohei_kh/items/2249c13d30648f50b9c8)
+
+## 検索時のSQLの確認と検索マッチャー
+- `_cont`をつけると検索文字列を含むものを検索する。
+- 他のマッチャーについてはransackの[README](https://github.com/activerecord-hackery/ransack/blob/master/README.md)を確認
