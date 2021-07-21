@@ -14,7 +14,7 @@ describe 'タスク管理機能', type: :system do
 			before do
 				# ユーザーAでログインする
 				visit login_path
-				fill_in 'メールアドレス', with: 'a@example.com'
+				fill_in "session[email]", with: 'a@example.com'
 				fill_in 'パスワード', with: 'password'
 				click_button 'ログインする'
 			end
