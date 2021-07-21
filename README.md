@@ -117,3 +117,6 @@ p.174
 3. 実行部分
 
 - rails consoleで絞り込み条件までを書いた状態の場合、　`to_sql`というメソッドを使って、生成予定のSQLを見ることができる
+
+## capybaraを使ってテストする
+[Docker環境でRspec×Capybara×ChromeDriverを動作させる - Qiita](https://qiita.com/ryohei_kh/items/2249c13d30648f50b9c8)
