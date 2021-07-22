@@ -137,3 +137,34 @@ TaskMailer.creation_email(@task).deliver_now
   ```ruby
   .deliver_later(wait: 5.minutes)
   ```
+
+## gem installできない
+```bash
+  Try 'brew install sqlite3',
+'yum install sqlite-devel' or 'apt-get install libsqlite3-dev'
+```
+こんな感じでエラーが出たので
+- `dx rails apt-get libsqlite3-dev`を実行したが、alpine image使ってるので `apt-get`使えないらしい
+[docekrで/bin/sh: apt-get: not found が出るのでbuildできない - Qiita](https://qiita.com/HorikawaTokiya/items/a2a174680d7dd759ccae)
+- [Alpine Linux使ってみた - Qiita](https://qiita.com/tukiyo3/items/247f853c81bf00e82c11)
+
+結局、
+```bash
+apk add install libsqlite3-dev
+```
+したが、package が見つからないとエラーが出て、断念した
+
+# paginationの設定
+- gem `kaminari`を使う
+
+### backend
+```ruby
+@tasks = @q.result(distint: true).page(params[:page])
+```
+- `params[:page]`で何ページ目かの情報を取得する
+
+### frontend
+ページネーションに必要な情報は
+1. 現在のページ
+2. ほかのページに移動するためのリンク
+3. 全データが何件なのかといった情報
