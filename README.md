@@ -125,3 +125,15 @@ p.174
 - `_cont`をつけると検索文字列を含むものを検索する。
 - 他のマッチャーについてはransackの[README](https://github.com/activerecord-hackery/ransack/blob/master/README.md)を確認
 - 検索に利用してよいカラムの範囲を制限しておく。
+
+## mailを送信する
+- text形式 or HTML形式で送るのかを検討する
+
+```ruby
+TaskMailer.creation_email(@task).deliver_now
+```
+- `deliver_now` で即時送信することができる
+- 5分後に送信したい場合は、
+  ```ruby
+  .deliver_later(wait: 5.minutes)
+  ```
