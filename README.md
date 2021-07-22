@@ -168,3 +168,14 @@ apk add install libsqlite3-dev
 1. 現在のページ
 2. ほかのページに移動するためのリンク
 3. 全データが何件なのかといった情報
+
+# 非同期書をAjaxで実現する
+```html
+= link_to '削除', task, method: :delete, remote: true, data: { confirm: "タスク「#{task.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
+```
+
+- `remote: true`でRails が自動的にAjaxでサーバにリクエストを送信するようになる
+- link_toメソッド以外では、button_toメソッドにも`remote: true`が設定可能。
+- form_withメソッドはデフォルトでAjaxを利用し、向こうにするときに`local: true`を指定する
+
+- Railsは`remote: true`をつけたa要素に対して、Ajax通信が成功した時に`ajax: success`というイベントを発行してくれます。

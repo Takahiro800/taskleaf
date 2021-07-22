@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
 		@q= current_user.tasks.ransack(params[:q])
-		@tasks = @q.result(distinct: true).page(params[:page])
+		@tasks = @q.result(distinct: true).resent.page(params[:page])
   end
 
   def show
@@ -44,7 +44,8 @@ class TasksController < ApplicationController
 
 	def destroy
 		@task.destroy
-		redirect_to tasks_url, notice: "タスク「#{@task.name}」を削除しました"
+		# ajaxで通信するので、redirectさせる必要はない
+		head :no_content
 	end
 
 	private
