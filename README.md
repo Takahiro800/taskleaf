@@ -124,3 +124,4 @@ p.174
 ## 検索時のSQLの確認と検索マッチャー
 - `_cont`をつけると検索文字列を含むものを検索する。
 - 他のマッチャーについてはransackの[README](https://github.com/activerecord-hackery/ransack/blob/master/README.md)を確認
+- 検索に利用してよいカラムの範囲を制限しておく。

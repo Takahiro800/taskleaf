@@ -7,6 +7,15 @@ class Task < ApplicationRecord
 
 	scope :resent, -> { order(created_at: :desc) }
 
+	# ransackの検索利用範囲の制限
+	def self.ransackable_attributes(auth_object = nil)
+		%w[name created_at]
+	end
+
+	def self.ransackable_associations(auth_object = nil)
+		[]
+	end
+
 	private
 
 	def set_nameless_name
